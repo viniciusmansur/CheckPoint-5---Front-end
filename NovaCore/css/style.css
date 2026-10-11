@@ -1,4 +1,4 @@
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -48,7 +48,7 @@ nav {
     }
 }
 
-.section {
+.container {
     display: flex;
     justify-content: center;
     padding: 0 270px;
@@ -103,14 +103,14 @@ nav {
 }
 
 #services {
+    padding: 100px 0;
     flex-direction: column;
     align-items: center;
     background-color: var(--dark);
-    height: 1020px;
     gap: 28px;
 }
 
-#eyebrow {
+.eyebrow {
     color: var(--btn-color);
     font-family: var(--subtitle-font);
 }
@@ -162,7 +162,7 @@ nav {
 
 #aboutus {
     background-color: var(--aboutus-bg-color);
-    padding-top: 100px;
+    padding: 100px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -173,6 +173,7 @@ nav {
 #aboutus-content {
     display: flex;
     align-items: center;
+    gap: 60px;
 }
 
 #aboutus-text {
@@ -193,7 +194,7 @@ nav {
     width: 540px;
 }
 
-.paragraph{
+.paragraph {
     color: var(--subtitle-color);
     font-family: var(--subtitle-font);
     font-weight: 400;
@@ -205,4 +206,46 @@ nav {
     background: linear-gradient(102.38deg, #A659D6 0%, #472966 50%, #140F1F 100%);
     width: 570px;
     height: 320px;
+    border-radius: 22px;
+}
+
+#depoimentos {
+    padding: 100px 0;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img {
+    border-radius: 100%;
+    background-color: var(--btn-color);
+    height: 54px;
+    width: 54px;
+}
+
+#depoimentos-cards{
+    display: flex;
+    padding-top: 36px;
+    gap: 24px;
+}
+
+.card-dep {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-color);
+    height: 240px;
+    width: 374px;
+    padding: 28px 26px;
+    gap: 16px;
+    border-radius: 18px;
+    color: var(--title-color);
+    font-family: var(--subtitle-font);
+}
+
+#depoimentos-text {
+    font-weight: 600;
 }

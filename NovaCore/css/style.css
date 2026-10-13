@@ -249,3 +249,78 @@ nav {
 #depoimentos-text {
     font-weight: 600;
 }
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--dark);
+}
+
+#contato-content {
+    display: flex;
+    align-items: center;
+    padding-top: 34px;
+    gap: 34px;
+}
+
+#contato-img{
+    width: 500px;
+    height: 360px;
+    border-radius: 22px;
+    background: linear-gradient(102.38deg, #A659D6 0%, #472966 50%, #140F1F 100%);
+}
+
+#forms{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 34px;
+    gap: 14px;
+    border-radius: 22px;
+    border: 2px solid #6E3FA3;
+    background-color: var(--aboutus-bg-color);
+}
+
+#forms-title{
+    font-family: var(--title-font);
+    color: var(--paragaph-title);
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: start;
+}
+
+#mensagem{
+    padding: 20px 0;
+}
+
+input{
+    border-radius: 6px;
+    border: 1.5px solid #6E3FA3;
+    background-color: #14111C;
+    padding: 10px 0;
+}
+
+label {
+    font-family: var(--subtitle-font);
+    font-size: 13px;
+    color: var(--title-color);
+}
+
+#forms-subtitle{
+    font-family: var(--subtitle-font);
+    color: var(--subtitle-color);
+    font-size: 13px;
+}
+
+#btn-forms {
+    width: fit-content;
+    height: 45px;
+    padding: 0 30px;
+    font-size: 13px;
+}

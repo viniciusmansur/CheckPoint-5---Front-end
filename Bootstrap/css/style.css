@@ -1,0 +1,28 @@
+.text-cafe {
+    color: var(--primary);
+}
+
+.btn-cafe {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.btn-cafe:hover {
+    background-color: #724a24;
+    border-color: #724a24;
+    color: #fff;
+}
+
+.hero-img {
+    height: 400px;
+    width: 120px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #E8DCC8, #C9A872);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #C9A872, var(--primary));
+}

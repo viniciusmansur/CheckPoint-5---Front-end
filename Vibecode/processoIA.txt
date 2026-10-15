@@ -1,0 +1,114 @@
+Ideia do projeto: A ideia era criar um site com o tema Elden Ring, jogo que eu gosto bastante! Então decidi criar um site que introduz e
+explica alguns conceitos e personagens. 
+
+Prompts:
+PRIMEIRO PROMPT
+- Imagine que você é um desenvolvedor Front-end profissional com vários anos de experiência. Agora imagina que te passaram a tarefa de desenvolver uma landing page com o tema sobre o jogo Elden Ring, para isso você usará HTML junto ao CSS e criará uma pasta onde existe um arquivo index.html e uma pasta chamada css, dentro dessa pasta, terão 3 arquivos CSS: reset.css,  style.css e variables.css onde cada arquivo deverá conter, respectivamente, um reset CSS, todo estilo da página e as variáveis úteis para a realização do projeto. O estilo do projeto deverá se assemelhar ao estilo de Elden Ring, onde as cores de títulos, textos e botões devem ser das cores que representem o jogo. Caso alguma coisa não tenha ficado clara, ou você precise de mais detalhes para criar um projeto em ótima qualidade, pergunte antes de realizar qualquer código. Com base nisso, crie um prompt com muita qualidade que descreva e peça para criar esse projeto.
+
+SEGUNDO PROMPT
+- # PAPEL
+
+Atue como um desenvolvedor Front-end sênior, com muitos anos de experiência em HTML5 semântico, CSS moderno, acessibilidade e design responsivo. Você tem também um olhar apurado de direção de arte e sabe traduzir a identidade visual de um jogo em uma interface web.
+
+# OBJETIVO
+
+Criar uma landing page temática sobre o jogo **Elden Ring** (FromSoftware / Bandai Namco), usando apenas **HTML e CSS** (sem JavaScript, sem frameworks e sem bibliotecas de CSS). A página deve transmitir a atmosfera do jogo: sombria, majestosa, melancólica e épica, com a sensação de um mundo antigo e em ruínas, iluminado pela luz dourada da Árvore Áurea.
+
+# ETAPA 0: PERGUNTE ANTES DE CODAR (OBRIGATÓRIO)
+
+Antes de escrever qualquer código, revise este briefing. Se houver ambiguidade, ou se faltar qualquer informação para entregar um resultado de alta qualidade, **faça suas perguntas primeiro e aguarde minhas respostas**. Agrupe tudo em uma única lista numerada e objetiva.
+
+Pontos que podem merecer perguntas: número e ordem das seções, idioma do conteúdo (padrão: português do Brasil), textos reais ou fictícios, links dos botões, imagens (URLs, arquivos locais ou placeholders), preferência de fontes, necessidade de menu fixo (sticky) e suporte a navegadores específicos.
+
+Se não houver dúvidas, diga explicitamente "Sem dúvidas, vou iniciar" e comece a entrega.
+
+# ESTRUTURA DE ARQUIVOS (EXATA)
+
+elden-ring-landing/
+├── index.html
+└── css/
+    ├── reset.css
+    ├── variables.css
+    └── style.css
+Responsabilidade de cada arquivo:
+
+**css/reset.css**: um reset CSS moderno e enxuto (box-sizing border-box, remoção de margens e paddings padrão, normalização de listas, links, botões, formulários e mídia, img com max-width: 100% e display: block, scroll-behavior suave, respeito a prefers-reduced-motion). Nenhum estilo visual do projeto fica aqui.
+**css/variables.css**: apenas variáveis CSS em :root, organizadas e comentadas por categoria: cores, tipografia (famílias, tamanhos e pesos), espaçamentos, bordas, sombras, brilhos (glow), transições, larguras máximas e breakpoints de referência.
+**css/style.css**: todo o estilo da página, consumindo exclusivamente as variáveis de variables.css (sem valores "mágicos" repetidos). Organizado por seções com comentários e usando a nomenclatura **BEM**.
+**index.html**: deve importar os CSS na ordem reset.css → variables.css → style.css.
+# DIREÇÃO DE ARTE
+
+Referência: a identidade visual de Elden Ring, com a luz dourada da Árvore Áurea contra fundos escuros, pergaminho envelhecido, ouro desgastado e cinzas.
+
+**Paleta sugerida** (ajuste com bom senso e defina tudo como variável):
+
+Fundos: preto-azulado e cinza-carvão (ex.: #0b0b0d, #14120f, #1c1a17)
+Dourado principal, para títulos, bordas e destaques (ex.: #c8aa6e, #e6c875)
+Dourado brilhante, para hover e glow (ex.: #f0d98c)
+Ouro envelhecido/bronze, para detalhes secundários (ex.: #8a6d3b)
+Texto principal: bege/pergaminho claro (ex.: #d9cfb8)
+Texto secundário: cinza-quente (ex.: #9a917f)
+Acento opcional: vermelho-sangue escuro (ex.: #6b1d1d) para estados de ênfase ou perigo
+**Tipografia** (Google Fonts via <link>, com fallbacks serif):
+
+Títulos: fonte serifada clássica, com aparência de inscrição (ex.: **Cinzel**), em caixa alta com letter-spacing generoso
+Textos: fonte serifada legível, com ar de livro antigo (ex.: **Cormorant Garamond** ou **EB Garamond**)
+**Elementos de estilo:**
+
+Títulos em dourado, com leve text-shadow de brilho
+Divisores ornamentais criados só com CSS (linhas douradas com gradiente, losangos ou pseudo-elementos)
+Cards com borda fina dourada, fundo semitransparente escuro e sombra interna sutil
+Gradientes radiais dourados atrás do herói, simulando a luz da Árvore Áurea
+Textura sutil de ruído ou vinheta feita com gradientes CSS (sem imagens pesadas)
+**Botões**: primário com borda dourada, fundo escuro, texto dourado em caixa alta; no hover, preenchimento dourado suave, glow e leve elevação. Secundário com contorno mais discreto. Estados :hover, :focus-visible e :active bem definidos.
+# SEÇÕES DA LANDING PAGE
+
+**Header/Navegação**: logo em texto estilizado (ex.: "ELDEN RING"), links âncora para as seções e botão de destaque. Deve se adaptar ao mobile **sem JavaScript** (por exemplo, com a técnica checkbox + label, ou um menu simplificado).
+**Hero**: título impactante, subtítulo curto, dois botões (CTA primário e secundário) e fundo com gradientes e atmosfera. Inclua um espaço reservado para imagem de arte, com alt descritivo.
+**Sobre o jogo**: apresentação do jogo (RPG de ação em mundo aberto, 2022, FromSoftware, com narrativa de George R. R. Martin), em texto curto e bem escrito.
+**Características**: grid de 3 a 4 cards (ex.: Mundo aberto, Combate profundo, Builds e magias, Cooperativo e PvP).
+**O Mundo / Regiões**: destaque para locais icônicos, como Limgrave, Liurnia, Caelid e a Árvore Áurea.
+**Personagens e Semideuses**: cards com nome, título e breve descrição (ex.: Melina, Ranni, Malenia, Radahn).
+**Chamada final (CTA)**: bloco de fechamento com frase de efeito e botão principal.
+**Footer**: créditos, aviso de que é um projeto de fã sem fins lucrativos, e que Elden Ring pertence à FromSoftware e à Bandai Namco.
+Adapte a lista de seções conforme minhas respostas na Etapa 0.
+
+# REQUISITOS TÉCNICOS
+
+HTML5 semântico: header, nav, main, section, article, footer; hierarquia de headings correta (um único h1); lang="pt-BR"; meta tags charset, viewport, description e title.
+**Mobile-first** e totalmente responsivo (mobile, tablet e desktop), usando Flexbox e CSS Grid, clamp() para tipografia fluida e media queries.
+Acessibilidade: contraste adequado (WCAG AA), alt em imagens, aria-label onde necessário, foco visível, navegação por teclado, prefers-reduced-motion respeitado.
+Animações apenas com CSS (transições, @keyframes sutis como brilho pulsante e fade-in), sem exageros.
+Imagens: use placeholders ou gradientes CSS. **Não use nem copie assets oficiais protegidos por direitos autorais.** Indique claramente onde o usuário poderá inserir suas próprias imagens.
+Código limpo, indentado, comentado onde agregar valor, sem CSS inline e sem !important.
+Sem JavaScript, frameworks ou bibliotecas externas (exceto as fontes do Google Fonts).
+# FORMATO DA ENTREGA
+
+Primeiro, as perguntas da Etapa 0 (se houver) e **pare até eu responder**.
+Depois, a árvore de pastas final.
+Em seguida, o código **completo** de cada arquivo, em blocos separados e identificados pelo caminho (index.html, css/reset.css, css/variables.css, css/style.css), sem trechos omitidos nem "..." no meio do código.
+Por fim, um resumo curto com as decisões de design (paleta, fontes), como abrir o projeto e onde personalizar textos, cores e imagens.
+# CHECKLIST DE QUALIDADE (valide antes de entregar)
+
+[ ] Estrutura de pastas e nomes de arquivos exatamente como especificado
+[ ] reset.css só com reset, variables.css só com variáveis, style.css com todo o estilo
+[ ] Nenhuma cor ou medida repetida "solta" no style.css (tudo via variáveis)
+[ ] Visual coerente com Elden Ring (dourado, escuro, pergaminho, serifado)
+[ ] Botões, títulos e textos com as cores temáticas e bom contraste
+[ ] Responsivo e testado mentalmente em 360px, 768px e 1280px
+[ ] HTML semântico e acessível
+[ ] Sem JavaScript e sem dependências além das fontes
+
+TERCEIRO PROMPT
+- 1 - Mantenha as 8 seções propostas do briefing
+2 - Faça em português do Brasil e em um tom épico e fiel ao jogo mas em um tom explicativo
+3 - Pode fazer dessa forma que você sugeriu
+4 - Não possuo imagens prontas, então preciso que você crie placeholders utilizando gradientes CSS com uma explicação do que a imagem deve representar
+5 - Pode utilizar Cinzel para títulos + Cormorant Garamond para os textos
+6 - Não, faça com um header fixo no topo da tela que não irá seguir o scroll da página
+7 - Não faça esse menu hambúrguer
+8 - Retire a Melina e Ranni e adicione no lugar Godfrey e Morgott
+9 - Retire Caelid e adicione Altus Plateau e Leyndell
+10 - Não, não tenho nenhum requisito específico quanto compatibilidade
+11 - Pode fazer, mas não faça de uma forma que distraia do foco principal que é o conteúdo
+12 - Pode manter apenas o aviso de projeto de fã com os direitos da FromSoftware/Bandai Namco

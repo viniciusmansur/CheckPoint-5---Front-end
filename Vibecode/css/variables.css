@@ -1,0 +1,166 @@
+/* Apenas variáveis. Cada categoria é consumida por css/style.css */
+
+:root {
+    /* ---------- CORES ---------- */
+    --color-bg-deep: #0b0b0d;
+    --color-bg-coal: #14120f;
+    --color-bg-surface: #1c1a17;
+
+    --color-gold: #c8aa6e;
+    --color-gold-light: #e6c875;
+    --color-gold-bright: #f0d98c;
+    --color-bronze: #8a6d3b;
+    --color-blood: #6b1d1d;
+
+    --color-text: #d9cfb8;
+    --color-text-muted: #9a917f;
+
+    /* Transparências */
+    --color-gold-alpha-soft: rgba(200, 170, 110, 0.12);
+    --color-gold-alpha-fill: rgba(200, 170, 110, 0.18);
+    --color-gold-alpha-mid: rgba(200, 170, 110, 0.35);
+    --color-card-bg: rgba(20, 18, 15, 0.72);
+    --color-overlay: rgba(11, 11, 13, 0.9);
+
+    /* Tons de cenário (usados só nos placeholders) */
+    --color-moss: #2b3320;
+    --color-lake: #1c2a3a;
+    --color-night-blue: #101726;
+    --color-amber-dark: #3a2c14;
+    --color-omen: #2a1a24;
+
+    /* ---------- TIPOGRAFIA ---------- */
+    --font-title: "Cinzel", "Times New Roman", serif;
+    --font-body: "Cormorant Garamond", Georgia, serif;
+
+    --fs-xs: 0.9rem;
+    --fs-sm: 1rem;
+    --fs-base: clamp(1.15rem, 1.08rem + 0.3vw, 1.3rem);
+    --fs-lg: clamp(1.3rem, 1.15rem + 0.7vw, 1.6rem);
+    --fs-h3: clamp(1.2rem, 1.1rem + 0.5vw, 1.5rem);
+    --fs-h2: clamp(1.8rem, 1.3rem + 2vw, 2.8rem);
+    --fs-h1: clamp(2.6rem, 1.4rem + 5.5vw, 5.5rem);
+    --fs-tag: 0.75rem;
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-semibold: 600;
+    --fw-bold: 700;
+
+    --lh-body: 1.65;
+    --lh-title: 1.2;
+    --ls-wide: 0.12em;
+    --ls-wider: 0.25em;
+
+    /* ---------- ESPAÇAMENTOS ---------- */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.5rem;
+    --space-6: 2rem;
+    --space-7: 3rem;
+    --space-8: 4.5rem;
+    --space-9: 6.5rem;
+    --gutter: 1.25rem;
+
+    /* ---------- BORDAS ---------- */
+    --border-thin: 1px;
+    --border-thick: 2px;
+    --radius-sm: 2px;
+    --radius-md: 4px;
+
+    /* ---------- SOMBRAS E BRILHOS ---------- */
+    --shadow-card: inset 0 0 2rem rgba(0, 0, 0, 0.45), 0 0.5rem 1.5rem rgba(0, 0, 0, 0.4);
+    --glow-gold: 0 0 1rem rgba(200, 170, 110, 0.35);
+    --glow-gold-strong: 0 0 1.75rem rgba(240, 217, 140, 0.45);
+    --text-glow: 0 0 1.25rem rgba(200, 170, 110, 0.35);
+
+    /* ---------- TRANSIÇÕES E ANIMAÇÕES ---------- */
+    --transition-fast: 200ms ease;
+    --transition-base: 350ms ease;
+    --duration-fade: 1.2s;
+    --duration-pulse: 6s;
+    --duration-drift: 90s;
+    --opacity-aura-min: 0.6;
+    --opacity-ash: 0.55;
+    --scale-aura: 1.06;
+
+    /* ---------- LAYOUT ---------- */
+    --container-max: 72rem;
+    --measure: 38rem;
+    --header-height: 4.5rem;
+    --size-rune: 3rem;
+    --size-diamond: 0.6rem;
+    --width-divider: 12rem;
+    --ratio-wide: 16 / 10;
+    --ratio-portrait: 3 / 4;
+    --ratio-hero: 4 / 5;
+    /* Breakpoints de referência (media queries não aceitam var()):
+     tablet = 48em (768px) · desktop = 64em (1024px) */
+
+    /* ---------- TEXTURAS E GRADIENTES ---------- */
+    --texture-grain: repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.012) 0 1px, transparent 1px 3px);
+    --vignette: radial-gradient(ellipse at 50% 0%, rgba(200, 170, 110, 0.08), transparent 60%);
+    --bg-page: var(--vignette), var(--texture-grain), var(--color-bg-deep);
+
+    --gradient-aura:
+        radial-gradient(ellipse 60% 50% at 70% 35%, rgba(240, 217, 140, 0.28), rgba(200, 170, 110, 0.1) 40%, transparent 70%),
+        radial-gradient(ellipse 80% 60% at 50% 0%, rgba(138, 109, 59, 0.25), transparent 70%);
+    --gradient-divider: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+    --gradient-section-alt: linear-gradient(180deg, var(--color-bg-coal), var(--color-bg-deep));
+    --gradient-caption: linear-gradient(to top, rgba(11, 11, 13, 0.94), rgba(11, 11, 13, 0.6) 70%, transparent);
+    --gradient-cta: radial-gradient(ellipse 70% 90% at 50% 100%, rgba(200, 170, 110, 0.22), transparent 70%);
+
+    /* "Cinzas" flutuantes: duas camadas de pontos de luz */
+    --ash-layers:
+        radial-gradient(circle, rgba(240, 217, 140, 0.7) 0 1px, transparent 2px),
+        radial-gradient(circle, rgba(200, 170, 110, 0.5) 0 1px, transparent 2px);
+    --ash-size-a: 160px 200px;
+    --ash-size-b: 240px 300px;
+    --ash-start-a: 0 0;
+    --ash-start-b: 60px 80px;
+    --ash-end-a: 0 -600px;
+    --ash-end-b: 60px -520px;
+
+    /* ---------- ARTES PLACEHOLDER (gradientes) ---------- */
+    --art-default: linear-gradient(160deg, var(--color-bg-surface), var(--color-bg-deep));
+    --art-hero:
+        radial-gradient(circle at 50% 38%, rgba(240, 217, 140, 0.9) 0 3%, rgba(200, 170, 110, 0.45) 12%, transparent 45%),
+        linear-gradient(180deg, var(--color-amber-dark) 0%, var(--color-bg-coal) 55%, var(--color-bg-deep) 100%);
+    --art-limgrave:
+        radial-gradient(ellipse 70% 40% at 50% 20%, rgba(230, 200, 117, 0.35), transparent 70%),
+        linear-gradient(180deg, var(--color-bg-surface), var(--color-moss));
+    --art-liurnia:
+        radial-gradient(ellipse 60% 40% at 50% 15%, rgba(154, 200, 230, 0.3), transparent 70%),
+        linear-gradient(180deg, var(--color-night-blue), var(--color-lake));
+    --art-altus:
+        radial-gradient(ellipse 70% 45% at 50% 25%, rgba(240, 217, 140, 0.4), transparent 70%),
+        linear-gradient(180deg, var(--color-amber-dark), var(--color-bg-coal));
+    --art-leyndell:
+        radial-gradient(circle at 50% 85%, rgba(240, 217, 140, 0.5), transparent 55%),
+        linear-gradient(0deg, var(--color-amber-dark), var(--color-bg-deep));
+    --art-tree:
+        radial-gradient(circle at 50% 30%, var(--color-gold-bright) 0 4%, rgba(200, 170, 110, 0.5) 14%, transparent 50%),
+        linear-gradient(180deg, var(--color-amber-dark), var(--color-bg-deep));
+    --art-godfrey:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(200, 170, 110, 0.35), transparent 70%),
+        linear-gradient(180deg, var(--color-amber-dark), var(--color-bg-deep));
+    --art-morgott:
+        radial-gradient(ellipse 60% 50% at 50% 30%, rgba(200, 170, 110, 0.25), transparent 70%),
+        linear-gradient(180deg, var(--color-omen), var(--color-bg-deep));
+    --art-malenia:
+        radial-gradient(ellipse 60% 50% at 50% 35%, rgba(180, 60, 40, 0.45), transparent 70%),
+        linear-gradient(180deg, var(--color-blood), var(--color-bg-deep));
+    --art-radahn:
+        radial-gradient(circle at 50% 20%, rgba(240, 217, 140, 0.4), transparent 45%),
+        linear-gradient(180deg, var(--color-night-blue), var(--color-bg-deep));
+}
+
+/* Sem movimento: elimina transições (animações só existem em style.css sob no-preference) */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: 0s;
+        --transition-base: 0s;
+    }
+}

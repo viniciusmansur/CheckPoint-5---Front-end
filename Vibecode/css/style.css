@@ -1,0 +1,685 @@
+/* =========================================================
+   ELDEN RING, Landing page de fã
+   Nomenclatura BEM · valores via css/variables.css
+   ========================================================= */
+
+/* ---------- 1. BASE ---------- */
+body {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: var(--lh-body);
+    color: var(--color-text);
+    background: var(--bg-page);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-title);
+    font-weight: var(--fw-semibold);
+    line-height: var(--lh-title);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    color: var(--color-gold);
+    text-shadow: var(--text-glow);
+}
+
+.container {
+    width: min(100% - (var(--gutter) * 2), var(--container-max));
+    margin-inline: auto;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: var(--border-thin);
+    height: var(--border-thin);
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+.skip-link {
+    position: absolute;
+    top: calc(var(--space-8) * -1);
+    left: var(--space-3);
+    padding: var(--space-2) var(--space-4);
+    font-family: var(--font-title);
+    color: var(--color-bg-deep);
+    background: var(--color-gold);
+}
+
+.skip-link:focus-visible {
+    top: var(--space-3);
+}
+
+/* ---------- 2. COMPONENTES: DIVISOR, BOTÕES, PLACEHOLDER ---------- */
+.divider {
+    position: relative;
+    max-width: var(--width-divider);
+    height: var(--space-4);
+    margin-inline: auto;
+    background: var(--gradient-divider) center / 100% var(--border-thin) no-repeat;
+}
+
+.divider::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--size-diamond);
+    height: var(--size-diamond);
+    background: var(--color-gold);
+    box-shadow: var(--glow-gold);
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-4) var(--space-6);
+    font-family: var(--font-title);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    text-align: center;
+    border: var(--border-thin) solid var(--color-gold);
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-base), color var(--transition-base),
+        box-shadow var(--transition-base), transform var(--transition-base), border-color var(--transition-base);
+}
+
+.btn:focus-visible {
+    outline: var(--border-thick) solid var(--color-gold-bright);
+    outline-offset: var(--space-1);
+}
+
+.btn--primary {
+    color: var(--color-gold);
+    background: var(--color-bg-deep);
+}
+
+.btn--primary:hover {
+    color: var(--color-gold-bright);
+    background: var(--color-gold-alpha-fill);
+    box-shadow: var(--glow-gold-strong);
+    transform: translateY(calc(var(--space-1) * -1));
+}
+
+.btn--primary:active {
+    background: var(--color-gold-alpha-mid);
+    box-shadow: var(--glow-gold);
+    transform: translateY(0);
+}
+
+.btn--secondary {
+    color: var(--color-text);
+    background: transparent;
+    border-color: var(--color-gold-alpha-mid);
+}
+
+.btn--secondary:hover {
+    color: var(--color-gold-bright);
+    border-color: var(--color-gold);
+    box-shadow: var(--glow-gold);
+}
+
+.btn--secondary:active {
+    background: var(--color-gold-alpha-soft);
+}
+
+.btn--small {
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--fs-xs);
+}
+
+/* Placeholder de imagem: gradiente CSS + legenda explicando a arte */
+.placeholder {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    aspect-ratio: var(--ratio-wide);
+    overflow: hidden;
+    background: var(--placeholder-art, var(--art-default));
+    border: var(--border-thin) solid var(--color-gold-alpha-mid);
+    box-shadow: var(--shadow-card);
+}
+
+/* Moldura tracejada: sinaliza que é um espaço reservado */
+.placeholder::before {
+    content: "";
+    position: absolute;
+    inset: var(--space-2);
+    border: var(--border-thin) dashed var(--color-gold-alpha-mid);
+    pointer-events: none;
+}
+
+.placeholder__caption {
+    position: relative;
+    width: 100%;
+    padding: var(--space-5) var(--space-4) var(--space-4);
+    font-size: var(--fs-sm);
+    line-height: 1.4;
+    color: var(--color-text);
+    background: var(--gradient-caption);
+}
+
+.placeholder__tag {
+    display: block;
+    margin-bottom: var(--space-1);
+    font-family: var(--font-title);
+    font-size: var(--fs-tag);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.placeholder--flush {
+    border: 0;
+    box-shadow: none;
+}
+
+.placeholder--portrait {
+    aspect-ratio: var(--ratio-portrait);
+}
+
+.placeholder--hero {
+    --placeholder-art: var(--art-hero);
+    aspect-ratio: var(--ratio-hero);
+}
+
+.placeholder--limgrave {
+    --placeholder-art: var(--art-limgrave);
+}
+
+.placeholder--liurnia {
+    --placeholder-art: var(--art-liurnia);
+}
+
+.placeholder--altus {
+    --placeholder-art: var(--art-altus);
+}
+
+.placeholder--leyndell {
+    --placeholder-art: var(--art-leyndell);
+}
+
+.placeholder--tree {
+    --placeholder-art: var(--art-tree);
+}
+
+.placeholder--godfrey {
+    --placeholder-art: var(--art-godfrey);
+}
+
+.placeholder--morgott {
+    --placeholder-art: var(--art-morgott);
+}
+
+.placeholder--malenia {
+    --placeholder-art: var(--art-malenia);
+}
+
+.placeholder--radahn {
+    --placeholder-art: var(--art-radahn);
+}
+
+/* ---------- 3. HEADER ---------- */
+.header {
+    background: var(--color-overlay);
+    border-bottom: var(--border-thin) solid var(--color-gold-alpha-mid);
+}
+
+.header__inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+        "logo cta"
+        "nav nav";
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+    padding-block: var(--space-3);
+}
+
+.header__logo {
+    grid-area: logo;
+    font-family: var(--font-title);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--color-gold);
+    text-shadow: var(--text-glow);
+}
+
+.header__logo:focus-visible,
+.header__link:focus-visible {
+    outline: var(--border-thick) solid var(--color-gold-bright);
+    outline-offset: var(--space-1);
+}
+
+.header__nav {
+    grid-area: nav;
+    min-width: 0;
+}
+
+/* Mobile: menu simplificado, sempre visível, com rolagem horizontal */
+.header__list {
+    display: flex;
+    gap: var(--space-5);
+    padding-block: var(--space-2);
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-bronze) transparent;
+}
+
+.header__link {
+    display: block;
+    padding-block: var(--space-1);
+    font-family: var(--font-title);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--color-text);
+    border-bottom: var(--border-thin) solid transparent;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.header__link:hover {
+    color: var(--color-gold-bright);
+    border-color: var(--color-gold);
+}
+
+.header__cta {
+    grid-area: cta;
+}
+
+/* ---------- 4. HERO ---------- */
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--space-8);
+}
+
+.hero__aura,
+.hero__ash {
+    position: absolute;
+    inset: 0;
+}
+
+.hero__aura {
+    background: var(--gradient-aura);
+}
+
+.hero__ash {
+    background-image: var(--ash-layers);
+    background-size: var(--ash-size-a), var(--ash-size-b);
+    background-position: var(--ash-start-a), var(--ash-start-b);
+    opacity: var(--opacity-ash);
+}
+
+.hero__inner {
+    position: relative;
+    display: grid;
+    gap: var(--space-7);
+    align-items: center;
+}
+
+.hero__content {
+    text-align: center;
+}
+
+.hero__eyebrow {
+    margin-bottom: var(--space-4);
+    font-family: var(--font-title);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.hero__title {
+    margin-bottom: var(--space-5);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bold);
+    letter-spacing: var(--ls-wider);
+}
+
+.hero__subtitle {
+    max-width: var(--measure);
+    margin: 0 auto var(--space-6);
+    font-size: var(--fs-lg);
+    font-style: italic;
+}
+
+.hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    justify-content: center;
+}
+
+/* ---------- 5. SEÇÕES (estrutura comum) ---------- */
+.section {
+    padding-block: var(--space-8);
+}
+
+.section--alt {
+    background: var(--gradient-section-alt);
+    border-block: var(--border-thin) solid var(--color-gold-alpha-soft);
+}
+
+.section__header {
+    margin-bottom: var(--space-7);
+    text-align: center;
+}
+
+.section__eyebrow {
+    margin-bottom: var(--space-2);
+    font-family: var(--font-title);
+    font-size: var(--fs-xs);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.section__title {
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-h2);
+}
+
+/* ---------- 6. SOBRE ---------- */
+.about {
+    display: grid;
+    gap: var(--space-6);
+    align-items: start;
+}
+
+.about__text {
+    display: grid;
+    gap: var(--space-4);
+    max-width: var(--measure);
+}
+
+.about__facts {
+    padding: var(--space-5);
+    background: var(--color-card-bg);
+    border: var(--border-thin) solid var(--color-gold-alpha-mid);
+    box-shadow: var(--shadow-card);
+}
+
+.about__fact {
+    padding-block: var(--space-3);
+    border-bottom: var(--border-thin) solid var(--color-gold-alpha-soft);
+}
+
+.about__fact:last-child {
+    border-bottom: 0;
+}
+
+.about__fact dt {
+    font-family: var(--font-title);
+    font-size: var(--fs-tag);
+    letter-spacing: var(--ls-wide);
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.about__fact dd {
+    color: var(--color-text);
+}
+
+/* ---------- 7. CARDS (características, regiões, personagens) ---------- */
+.card,
+.region,
+.character {
+    background: var(--color-card-bg);
+    border: var(--border-thin) solid var(--color-gold-alpha-mid);
+    box-shadow: var(--shadow-card);
+    transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover,
+.region:hover,
+.character:hover {
+    border-color: var(--color-gold);
+    box-shadow: var(--shadow-card), var(--glow-gold);
+    transform: translateY(calc(var(--space-1) * -1));
+}
+
+.features,
+.regions,
+.characters {
+    display: grid;
+    gap: var(--space-5);
+}
+
+.card {
+    padding: var(--space-6) var(--space-5);
+}
+
+.card__rune {
+    display: grid;
+    place-items: center;
+    width: var(--size-rune);
+    height: var(--size-rune);
+    margin-bottom: var(--space-4);
+    font-family: var(--font-title);
+    color: var(--color-gold);
+    border: var(--border-thin) solid var(--color-bronze);
+    transform: rotate(45deg);
+}
+
+/* Desfaz a rotação do losango para manter o numeral legível */
+.card__rune::first-line {
+    line-height: 1;
+}
+
+.card__title,
+.region__name,
+.character__name {
+    margin-bottom: var(--space-3);
+    font-size: var(--fs-h3);
+}
+
+.card__text,
+.region__text,
+.character__text {
+    color: var(--color-text);
+}
+
+.region__body,
+.character__body {
+    padding: var(--space-5);
+}
+
+.character__title {
+    margin-bottom: var(--space-3);
+    font-style: italic;
+    color: var(--color-gold-light);
+}
+
+.character__name {
+    margin-bottom: var(--space-1);
+}
+
+/* ---------- 8. CTA FINAL ---------- */
+.cta {
+    padding-block: var(--space-9);
+    text-align: center;
+    background: var(--gradient-cta), var(--color-bg-coal);
+    border-top: var(--border-thin) solid var(--color-gold-alpha-mid);
+}
+
+.cta__inner {
+    display: grid;
+    justify-items: center;
+    gap: var(--space-5);
+    max-width: var(--measure);
+}
+
+.cta__title {
+    font-size: var(--fs-h1);
+}
+
+.cta__text {
+    font-size: var(--fs-lg);
+    font-style: italic;
+}
+
+/* ---------- 9. FOOTER ---------- */
+.footer {
+    padding-block: var(--space-7);
+    text-align: center;
+    background: var(--color-bg-deep);
+    border-top: var(--border-thin) solid var(--color-gold-alpha-mid);
+}
+
+.footer__inner {
+    display: grid;
+    gap: var(--space-3);
+    justify-items: center;
+}
+
+.footer__brand {
+    font-family: var(--font-title);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--color-gold);
+}
+
+.footer__text {
+    max-width: var(--measure);
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+/* ---------- 10. RESPONSIVO ---------- */
+@media (min-width: 48em) {
+    .header__inner {
+        grid-template-columns: auto 1fr auto;
+        grid-template-areas: "logo nav cta";
+        gap: var(--space-5);
+    }
+
+    .header__list {
+        justify-content: center;
+    }
+
+    .features,
+    .characters {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .regions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .region:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 64em) {
+    .section {
+        padding-block: var(--space-9);
+    }
+
+    .hero {
+        padding-block: var(--space-9);
+    }
+
+    .hero__inner {
+        grid-template-columns: 1.1fr 0.9fr;
+    }
+
+    .hero__content {
+        text-align: left;
+    }
+
+    .hero__subtitle {
+        margin-inline: 0;
+    }
+
+    .hero__actions {
+        justify-content: flex-start;
+    }
+
+    .about {
+        grid-template-columns: 1.2fr 0.8fr;
+    }
+
+    .features {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .characters {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Regiões: três em cima, duas maiores embaixo */
+    .regions {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .region {
+        grid-column: span 2;
+    }
+
+    .region:nth-child(n + 4),
+    .region:last-child {
+        grid-column: span 3;
+    }
+}
+
+/* ---------- 11. ANIMAÇÕES (sutis; só sem preferência por menos movimento) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+    .hero__content {
+        animation: fade-up var(--duration-fade) ease-out both;
+    }
+
+    .hero__aura {
+        animation: aura-pulse var(--duration-pulse) ease-in-out infinite alternate;
+    }
+
+    .hero__ash {
+        animation: ash-drift var(--duration-drift) linear infinite;
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(var(--space-5));
+        }
+
+        to {
+            opacity: 1;
+            transform: none;
+        }
+    }
+
+    @keyframes aura-pulse {
+        from {
+            opacity: var(--opacity-aura-min);
+            transform: scale(1);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(var(--scale-aura));
+        }
+    }
+
+    /* O deslocamento é múltiplo do tamanho de cada camada: o ciclo emenda sem salto */
+    @keyframes ash-drift {
+        from {
+            background-position: var(--ash-start-a), var(--ash-start-b);
+        }
+
+        to {
+            background-position: var(--ash-end-a), var(--ash-end-b);
+        }
+    }
+}

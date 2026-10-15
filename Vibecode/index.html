@@ -1,11 +1,375 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Landing page de fã sobre Elden Ring, o RPG de ação em mundo aberto da FromSoftware. Explore as Terras Intermédias, seus semideuses e a luz da Árvore Áurea.">
+    <title>Elden Ring | Terras Intermédias — Projeto de fã</title>
+
+    <!-- Fontes: Cinzel (títulos) + Cormorant Garamond (textos) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Ordem obrigatória: reset → variáveis → estilo -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <!-- ============ 1. HEADER / NAVEGAÇÃO ============ -->
+    <header class="header" id="topo">
+        <div class="container header__inner">
+            <a class="header__logo" href="#topo" aria-label="Elden Ring, voltar ao topo">Elden Ring</a>
+
+            <nav class="header__nav" aria-label="Navegação principal">
+                <ul class="header__list">
+                    <li><a class="header__link" href="#sobre">Sobre</a></li>
+                    <li><a class="header__link" href="#caracteristicas">Características</a></li>
+                    <li><a class="header__link" href="#mundo">O Mundo</a></li>
+                    <li><a class="header__link" href="#personagens">Personagens</a></li>
+                </ul>
+            </nav>
+
+            <a class="btn btn--primary btn--small header__cta" href="https://eldenring.bn-ent.net" target="_blank"
+                rel="noopener noreferrer">
+                Site oficial<span class="visually-hidden"> (abre em nova aba)</span>
+            </a>
+        </div>
+    </header>
+
+    <main id="conteudo">
+
+        <!-- ============ 2. HERO ============ -->
+        <section class="hero" aria-labelledby="hero-titulo">
+            <div class="hero__aura" aria-hidden="true"></div>
+            <div class="hero__ash" aria-hidden="true"></div>
+
+            <div class="container hero__inner">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">Um mundo em ruínas. Uma luz que ainda não se apagou.</p>
+                    <h1 class="hero__title" id="hero-titulo">Elden Ring</h1>
+                    <p class="hero__subtitle">
+                        Nas Terras Intermédias, a ordem que sustentava o mundo foi estilhaçada e a graça dourada se
+                        perdeu.
+                        Como Maculado, você é chamado de volta para reunir os fragmentos e tornar-se Lorde Elden.
+                    </p>
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="https://eldenring.bn-ent.net" target="_blank"
+                            rel="noopener noreferrer">
+                            Conheça o jogo<span class="visually-hidden"> (abre em nova aba)</span>
+                        </a>
+                        <a class="btn btn--secondary" href="#sobre">Descubra o mundo</a>
+                    </div>
+                </div>
+
+                <!-- IMAGEM: substitua esta <figure> por <figure><img src="img/hero.jpg" alt="descrição"></figure> -->
+                <figure class="placeholder placeholder--hero">
+                    <figcaption class="placeholder__caption">
+                        <span class="placeholder__tag">Espaço para imagem · Arte do herói (4:5)</span>
+                        Silhueta de um Maculado a cavalo, de costas, cruzando um campo em ruínas rumo à Árvore Áurea,
+                        que domina o horizonte com névoa dourada e cinzas no ar.
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============ 3. SOBRE O JOGO ============ -->
+        <section class="section section--alt" id="sobre" aria-labelledby="sobre-titulo">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__eyebrow">A lenda</p>
+                    <h2 class="section__title" id="sobre-titulo">Sobre o jogo</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                </div>
+
+                <div class="about">
+                    <div class="about__text">
+                        <p>
+                            Elden Ring é um RPG de ação em mundo aberto desenvolvido pela FromSoftware e publicado pela
+                            Bandai Namco Entertainment. Lançado em 25 de fevereiro de 2022, foi dirigido por Hidetaka
+                            Miyazaki,
+                            criador da série Dark Souls, e conta com a construção de mitologia de George R. R. Martin,
+                            autor de As Crônicas de Gelo e Fogo.
+                        </p>
+                        <p>
+                            Em termos simples: o poder que ordenava o mundo, o Elden Ring, foi despedaçado, e seus
+                            fragmentos,
+                            as Grandes Runas, ficaram nas mãos de semideuses corrompidos pela ambição. Cabe ao Maculado,
+                            um guerreiro exilado e esquecido, reuni-las e decidir o destino das Terras Intermédias.
+                        </p>
+                    </div>
+
+                    <dl class="about__facts">
+                        <div class="about__fact">
+                            <dt>Lançamento</dt>
+                            <dd>25 de fevereiro de 2022</dd>
+                        </div>
+                        <div class="about__fact">
+                            <dt>Desenvolvedora</dt>
+                            <dd>FromSoftware</dd>
+                        </div>
+                        <div class="about__fact">
+                            <dt>Publicação</dt>
+                            <dd>Bandai Namco Entertainment</dd>
+                        </div>
+                        <div class="about__fact">
+                            <dt>Gênero</dt>
+                            <dd>RPG de ação em mundo aberto</dd>
+                        </div>
+                        <div class="about__fact">
+                            <dt>Mitologia</dt>
+                            <dd>George R. R. Martin</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 4. CARACTERÍSTICAS ============ -->
+        <section class="section" id="caracteristicas" aria-labelledby="caracteristicas-titulo">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__eyebrow">O que o aguarda</p>
+                    <h2 class="section__title" id="caracteristicas-titulo">Características</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                </div>
+
+                <div class="features">
+                    <article class="card">
+                        <span class="card__rune" aria-hidden="true">I</span>
+                        <h3 class="card__title">Mundo aberto</h3>
+                        <p class="card__text">Explore as Terras Intermédias a pé ou montado em Torrente, sem marcadores
+                            forçando o caminho. Masmorras, castelos e segredos esperam em cada colina, e você decide
+                            para onde ir primeiro.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__rune" aria-hidden="true">II</span>
+                        <h3 class="card__title">Combate profundo</h3>
+                        <p class="card__text">Cada golpe exige leitura do inimigo. Esquivas, defesas, ataques carregados
+                            e Cinzas de Guerra transformam os duelos em testes de paciência e precisão.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__rune" aria-hidden="true">III</span>
+                        <h3 class="card__title">Builds e magias</h3>
+                        <p class="card__text">Feitiçaria, milagres, espadas colossais ou arcos: distribua atributos como
+                            quiser e invoque Cinzas Espirituais para lutar ao seu lado.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__rune" aria-hidden="true">IV</span>
+                        <h3 class="card__title">Cooperativo e PvP</h3>
+                        <p class="card__text">Chame aliados para enfrentar chefes ou invada mundos alheios em duelos.
+                            Jogar junto torna o desafio mais acessível; jogar contra, mais imprevisível.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5. O MUNDO / REGIÕES ============ -->
+        <section class="section section--alt" id="mundo" aria-labelledby="mundo-titulo">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__eyebrow">As Terras Intermédias</p>
+                    <h2 class="section__title" id="mundo-titulo">O Mundo</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                </div>
+
+                <div class="regions">
+                    <article class="region">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/limgrave.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--limgrave">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Limgrave</span>
+                                Planícies verdes e ruínas sob céu nublado, com um raio da Árvore Áurea ao fundo.
+                            </figcaption>
+                        </figure>
+                        <div class="region__body">
+                            <h3 class="region__name">Limgrave</h3>
+                            <p class="region__text">Onde tudo começa. Campos abertos, ruínas e a luz da Árvore Áurea
+                                guiam os primeiros passos do Maculado. É acolhedora à primeira vista, mas esconde
+                                perigos que ensinam a respeitar o mundo.</p>
+                        </div>
+                    </article>
+
+                    <article class="region">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/liurnia.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--liurnia">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Liurnia</span>
+                                Lago raso coberto de névoa azulada, com torres de feiticeiros emergindo da água.
+                            </figcaption>
+                        </figure>
+                        <div class="region__body">
+                            <h3 class="region__name">Liurnia dos Lagos</h3>
+                            <p class="region__text">Um reino de águas rasas, bruma e torres de feiticeiros. Aqui
+                                ergue-se a Academia de Raya Lucaria, centro do estudo das magias nas Terras Intermédias.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="region">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/altus.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--altus">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Planalto Altus</span>
+                                Penhascos de tom âmbar e vegetação dourada ao entardecer, com uma estrada serpenteando
+                                ao longe.
+                            </figcaption>
+                        </figure>
+                        <div class="region__body">
+                            <h3 class="region__name">Planalto Altus</h3>
+                            <p class="region__text">Terras douradas de penhascos e minério reluzente, passagem
+                                obrigatória rumo à capital. Sua beleza serena prepara o viajante para o peso do que vem
+                                a seguir.</p>
+                        </div>
+                    </article>
+
+                    <article class="region">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/leyndell.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--leyndell">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Leyndell</span>
+                                Muralhas e torres de uma cidade imponente, banhadas em luz dourada vinda da Árvore
+                                Áurea.
+                            </figcaption>
+                        </figure>
+                        <div class="region__body">
+                            <h3 class="region__name">Leyndell, Cidade Real</h3>
+                            <p class="region__text">Capital das Terras Intermédias e sede da linhagem real. Suas
+                                muralhas e ruas douradas guardam o centro da disputa pelo trono e o destino do Elden
+                                Ring.</p>
+                        </div>
+                    </article>
+
+                    <article class="region">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/arvore-aurea.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--tree">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Árvore Áurea</span>
+                                A árvore colossal e luminosa cortando o céu escuro, com raios dourados e partículas de
+                                luz.
+                            </figcaption>
+                        </figure>
+                        <div class="region__body">
+                            <h3 class="region__name">Árvore Áurea</h3>
+                            <p class="region__text">Gigantesca árvore dourada cuja luz simboliza a graça que guia os
+                                Maculados. Seu brilho domina o céu das Terras Intermédias e é, ao mesmo tempo, fonte de
+                                fé e de dogma.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6. PERSONAGENS E SEMIDEUSES ============ -->
+        <section class="section" id="personagens" aria-labelledby="personagens-titulo">
+            <div class="container">
+                <div class="section__header">
+                    <p class="section__eyebrow">Figuras de lenda</p>
+                    <h2 class="section__title" id="personagens-titulo">Personagens e Semideuses</h2>
+                    <div class="divider" aria-hidden="true"></div>
+                </div>
+
+                <div class="characters">
+                    <article class="character">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/godfrey.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--portrait placeholder--godfrey">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Godfrey</span>
+                                Guerreiro robusto de machado em punho, com armadura dourada desgastada.
+                            </figcaption>
+                        </figure>
+                        <div class="character__body">
+                            <h3 class="character__name">Godfrey</h3>
+                            <p class="character__title">Primeiro Lorde Elden</p>
+                            <p class="character__text">Guerreiro brutal que lutou ao lado de Marika e depois foi
+                                exilado. Sua história é uma das mais trágicas das Terras Intermédias.</p>
+                        </div>
+                    </article>
+
+                    <article class="character">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/morgott.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--portrait placeholder--morgott">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Morgott</span>
+                                Figura encurvada de manto escuro e cajado, com chifres e olhar severo.
+                            </figcaption>
+                        </figure>
+                        <div class="character__body">
+                            <h3 class="character__name">Morgott</h3>
+                            <p class="character__title">O Rei Omen</p>
+                            <p class="character__text">Nascido Omen, desprezado e escondido, defende Leyndell com
+                                devoção feroz ao trono que o rejeitou.</p>
+                        </div>
+                    </article>
+
+                    <article class="character">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/malenia.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--portrait placeholder--malenia">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Malenia</span>
+                                Guerreira de elmo alado e cabelos ruivos, cercada por pétalas escarlates em redemoinho.
+                            </figcaption>
+                        </figure>
+                        <div class="character__body">
+                            <h3 class="character__name">Malenia</h3>
+                            <p class="character__title">Lâmina de Miquella</p>
+                            <p class="character__text">Guerreira de graça e fúria, marcada pela Podridão Escarlate. É um
+                                dos desafios mais temidos pelos jogadores.</p>
+                        </div>
+                    </article>
+
+                    <article class="character">
+                        <!-- IMAGEM: troque a <figure> por <img src="img/radahn.jpg" alt="..."> -->
+                        <figure class="placeholder placeholder--flush placeholder--portrait placeholder--radahn">
+                            <figcaption class="placeholder__caption">
+                                <span class="placeholder__tag">Espaço para imagem · Radahn</span>
+                                Gigante de armadura sobre um cavalo imenso, sob um céu noturno de estrelas.
+                            </figcaption>
+                        </figure>
+                        <div class="character__body">
+                            <h3 class="character__name">Radahn</h3>
+                            <p class="character__title">Flagelo das Estrelas</p>
+                            <p class="character__text">Meio-deus de força colossal, tão poderoso que até as estrelas se
+                                curvaram ao seu domínio. Seu confronto é um dos mais épicos do jogo.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 7. CHAMADA FINAL ============ -->
+        <section class="cta" aria-labelledby="cta-titulo">
+            <div class="container cta__inner">
+                <h2 class="cta__title" id="cta-titulo">Ergue-te, Maculado</h2>
+                <div class="divider" aria-hidden="true"></div>
+                <p class="cta__text">A graça dourada ainda brilha ao longe. Reúna as Grandes Runas, enfrente semideuses
+                    e escreva o seu destino nas Terras Intermédias.</p>
+                <a class="btn btn--primary" href="https://eldenring.bn-ent.net" target="_blank"
+                    rel="noopener noreferrer">
+                    Visitar o site oficial<span class="visually-hidden"> (abre em nova aba)</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ 8. FOOTER ============ -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p class="footer__brand">Elden Ring</p>
+            <p class="footer__text">Projeto de fã, sem fins lucrativos, criado apenas para estudo e entretenimento. Este
+                site não é afiliado nem endossado pelas empresas citadas.</p>
+            <p class="footer__text">Elden Ring é propriedade da FromSoftware, Inc. e da Bandai Namco Entertainment Inc.
+                Todos os direitos pertencem aos seus respectivos detentores.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
